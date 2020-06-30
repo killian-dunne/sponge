@@ -1,25 +1,39 @@
 import React, { Component } from 'react';
-import { View, StyleSheet, Text } from 'react-native';
+import { View, StyleSheet, Text, FlatList } from 'react-native';
 import FilePreview from '../components/FilePreview';
 import HeaderIcon from '../components/HeaderIcon';
-import FilesList from '../components/FilesList';
 import SettingsIcon from '../components/SettingsIcon';
 import { s } from '../styles/stylesFile';
-import { ScrollView } from 'react-native-gesture-handler';
+import File from '../components/File'
+
+const files = require('../data/Files.json');
 
 class HomeScreen extends Component {
   
   render() {
+    console.log('this is files:', files);
     return (
       <View style={styles.mainContainer}>
         <View style={s.header}>
           <HeaderIcon />
           <SettingsIcon navigation={this.props.navigation} />
         </View>
-        <ScrollView styles={styles.scrollArea}>
-          <FilePreview /> 
-          <FilesList />
-        </ScrollView>
+        <FlatList styles={styles.scrollArea} 
+          data={files}
+          keyExtractor={(item, index) => index.toString()}
+          renderItem={({ item, index }) => {
+            if (index === 0) {
+              return (
+                <>
+                  <FilePreview navigation={this.props.navigation} />
+                  <File fileObject={item} key={index} />
+                </>
+              );
+            } else {
+              return <File fileObject={item} key={index} />;
+            }
+          }}
+        />
       </View>
     );
   }
@@ -29,8 +43,11 @@ class HomeScreen extends Component {
 const styles = StyleSheet.create({
   mainContainer: {
     flex: 1,
+    height: '100%',
   },
   scrollArea: {
+    flex: 1,
+    marginHorizontal: 20,
     justifyContent: "center",
     alignItems: "center"
   },

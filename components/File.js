@@ -2,6 +2,8 @@ import React from 'react';
 import { Text, View, StyleSheet } from 'react-native';
 
 const File = (props) => {
+  console.log(props)
+  console.log(props.fileObject)
   let title = props.fileObject.title;
   let description = props.fileObject.description;
   let date = props.fileObject.date;
@@ -24,6 +26,7 @@ const File = (props) => {
 const styles = StyleSheet.create({
   card: {
     width: '80%',
+    alignSelf: 'center',
     alignItems: "flex-start",
     backgroundColor: "white",
     padding: 10,
