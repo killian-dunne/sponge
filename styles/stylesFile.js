@@ -5,6 +5,7 @@ export const s = StyleSheet.create({
   header: {
     flexDirection: 'row',
     justifyContent: 'space-between',
+    backgroundColor: colors.backYellow
   },
   iconContainer: {
     padding: 20,

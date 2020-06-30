@@ -21,7 +21,7 @@ const SettingsSwitch = () => {
         circleSize={30}
         barHeight={30}
         circleBorderWidth={2}
-        backgroundActive={colors.backYellow}
+        backgroundActive={"white"}
         backgroundInactive={colors.backOrange}
         circleActiveColor={colors.mainYellow}
         circleInActiveColor={colors.mainOrange}
