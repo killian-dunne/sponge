@@ -8,14 +8,13 @@ const SettingsSwitch = () => {
 
   const toggleValue = (e) => {
     e.persist();
-    console.log(e);
     setVal(!val);
   }
 
   return (
     <View style={styles.switchContainer}>
       <Switch
-        value={false}
+        value={val}
         disabled={false}
         activeText={'General'}
         inActiveText={'Reading'}

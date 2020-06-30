@@ -9,7 +9,6 @@ const FilesList = () => {
   return (
     <View style={styles.cardContainer}>
       {renderFiles}
-      <Text>This is some text</Text>
     </View>
   );
 };

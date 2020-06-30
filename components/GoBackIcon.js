@@ -8,7 +8,6 @@ const GoBackIcon = ({ navigation }) => {
 
   const returnHome = e => {
     e.persist();
-    console.log('this is my onpress', e);
     navigation.pop();
   }
 
