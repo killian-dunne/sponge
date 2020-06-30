@@ -12,11 +12,25 @@ const SettingsItem = (props) => {
   if (!props.last) {
     underline = s.bottomBorder;
   }
+
+  const performAction = () => {
+    switch (props.actionName) {
+      case "navigateReadSettings":
+        props.navigation.push('Reading Settings');
+        return;
+      case "navigateGenSettings":
+        props.navigation.push('General Settings');
+        return;
+      default:
+        return;
+    }
+  }
+
   return (
     <TouchableHighlight
       activeOpacity={0.6}
       underlayColor={colors.pressedGrey}
-      onPress={() => {}}
+      onPress={performAction}
     >
       <View style={[s.listItem, underline]}>
         <Text style={s.mainText}>{props.text}</Text>

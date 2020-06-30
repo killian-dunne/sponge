@@ -1,37 +1,37 @@
 [
   {
-    "title": "title0",
-    "description": "description0",
-    "date": "date0"
+    "title": "Spectral Decomposition",
+    "description": "Investigating spectral decomposition in Linear Algebra.",
+    "date": "29/05/20"
   },
   {
-    "title": "title1",
-    "description": "description1",
-    "date": "date1"
+    "title": "Non-linear Fourier transforms",
+    "description": "Study of popular Fourier transforms in higher dimensional space.",
+    "date": "29/05/20"
   },
   {
-    "title": "title2",
-    "description": "description2",
-    "date": "date2"
+    "title": "Algebraic Topology",
+    "description": "Low-dimensional manifolds of simple surfaces.",
+    "date": "30/05/20"
   },
   {
-    "title": "title3",
-    "description": "description3",
-    "date": "date3"
+    "title": "Conway's Theorem",
+    "description": "Usage of the relationship between a rational and tangle.",
+    "date": "30/05/20"
   },
   {
-    "title": "title4",
-    "description": "description4",
-    "date": "date4"
+    "title": "Alexander's Theorem",
+    "description": "The possibility to transform any knot into a three-strand braid.",
+    "date": "30/05/20"
   },
   {
-    "title": "title5",
-    "description": "description5",
-    "date": "date5"
+    "title": "Galois Theory",
+    "description": "Fundamental investigation of the roots of polynomials.",
+    "date": "29/05/20"
   },
   {
-    "title": "title6",
-    "description": "description6",
-    "date": "date6"
+    "title": "Field Extensions",
+    "description": "The addition of algebraic numbers while maintaining a field's structure.",
+    "date": "29/05/20"
   }
 ]

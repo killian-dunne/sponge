@@ -10,10 +10,13 @@ const File = (props) => {
       <Text style={styles.titleText} >
         <Text>{title}</Text>
       </Text>
-      <Text style={styles.regularText} >
-        <Text>{description}</Text>
-        <Text>{date}</Text>
-      </Text>
+      <View style={styles.regularText}>
+        <Text style={styles.descriptionText} numberOfLines={1}>
+          {description}
+        </Text>
+        <Text style={styles.dateText}>{date}</Text>
+      </View>
+      
     </View>
   );
 };
@@ -32,7 +35,13 @@ const styles = StyleSheet.create({
     fontSize: 20
   },
   regularText: {
-    
+    flexDirection: 'row',
+  },
+  descriptionText: {
+    flex: 3
+  },
+  dateText: {
+    flex: 1
   }
 })
 
