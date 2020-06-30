@@ -4,7 +4,7 @@ import SettingsItem from './SettingsItem';
 import { FlatList } from 'react-native';
 const settingsArray = require('../data/SettingsArray.json');
 
-const SettingsList = () => {
+const SettingsList = (props) => {
   return (
     <FlatList style={s.settingsView} 
       data={settingsArray} 
@@ -15,6 +15,7 @@ const SettingsList = () => {
           answer={item.answer} 
           last={index === settingsArray.length - 1} 
           actionName={item.actionName}
+          navigation={props.navigation}
         />
      )} 
     />
