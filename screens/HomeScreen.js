@@ -14,7 +14,6 @@ class HomeScreen extends Component {
       <View style={styles.mainContainer}>
         <View style={s.header}>
           <HeaderIcon />
-          <Text>Hello there</Text>
           <SettingsIcon navigation={this.props.navigation} />
         </View>
         <ScrollView styles={styles.scrollArea}>
