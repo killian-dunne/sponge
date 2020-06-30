@@ -12,12 +12,12 @@
     "actionName": "linkTutorial"
   },
   {
-    "text": "Reading Settings",
-    "actionName": "navigateReadSettings"
-  },
-  {
     "text": "General Settings",
     "actionName": "navigateGenSettings"
+  },
+  {
+    "text": "Reading Settings",
+    "actionName": "navigateReadSettings"
   },
   {
     "text": "Help/Support",

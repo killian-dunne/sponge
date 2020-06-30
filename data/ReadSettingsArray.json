@@ -1,0 +1,20 @@
+[
+  {
+    "text": "Average Speed",
+    "answer": "300 (words per minute)",
+    "actionName": "changeSpeed"
+  },
+  {
+    "text": "Font size",
+    "answer": "18 (recommended)",
+    "actionName": "changeFontSize"
+  },
+  {
+    "text": "Page Layout",
+    "actionName": "changeLayout"
+  },
+  {
+    "text": "Display Progress",
+    "actionName": "toggleProgress"
+  }
+]

@@ -3,7 +3,7 @@ import { View, Text, TouchableHighlight } from 'react-native';
 import { colors } from '../styles/colors';
 import { s } from '../styles/stylesFile';
 
-const SettingsItem = (props) => {
+const Item = (props) => {
   let answerElt;
   if (props.answer) {
     answerElt = <Text style={s.subText}>{props.answer}</Text>;
@@ -15,11 +15,15 @@ const SettingsItem = (props) => {
 
   const performAction = () => {
     switch (props.actionName) {
-      case "navigateReadSettings":
-        props.navigation.push('Reading Settings');
-        return;
       case "navigateGenSettings":
-        props.navigation.push('General Settings');
+        props.navigation.push('Settings', {
+          switchOption: 'general'
+        })
+        return;
+      case "navigateReadSettings":
+        props.navigation.push('Settings', {
+          switchOption: 'reading'
+        })
         return;
       default:
         return;
@@ -32,7 +36,7 @@ const SettingsItem = (props) => {
       underlayColor={colors.pressedGrey}
       onPress={performAction}
     >
-      <View style={[s.listItem, underline]}>
+      <View style={[s.Item, underline]}>
         <Text style={s.mainText}>{props.text}</Text>
         {answerElt}
       </View> 
@@ -41,4 +45,4 @@ const SettingsItem = (props) => {
 };
 
 
-export default SettingsItem;
+export default Item;

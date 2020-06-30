@@ -1,23 +1,17 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { View, StyleSheet, Text } from 'react-native';
 import { Switch } from 'react-native-switch';
 import { colors } from '../styles/colors';
 
-const SettingsSwitch = () => {
-  const [val, setVal] = useState(true);
-
-  const toggleValue = (e) => {
-    e.persist();
-    setVal(!val);
-  }
+const SettingsSwitch = (props) => {
 
   return (
     <View style={styles.switchContainer}>
       <Switch
-        value={val}
+        value={props.value}
         disabled={false}
-        activeText={'General'}
-        inActiveText={'Reading'}
+        activeText={'Reading'}
+        inActiveText={'General'}
         circleSize={30}
         barHeight={30}
         circleBorderWidth={2}
@@ -34,7 +28,7 @@ const SettingsSwitch = () => {
         switchRightPx={2} // denominator for logic when sliding to FALSE position. Higher number = more space from LEFT of the circle to BEGINNING of the slider
         switchWidthMultiplier={3.5} // multipled by the `circleSize` prop to calculate total width of the Switch
         switchBorderRadius={30} // Sets the border Radius of the switch slider. If unset, it remains the circleSize.
-        onPress={toggleValue}
+        onPress={props.toggleScreen}
       />
     </View>
   );

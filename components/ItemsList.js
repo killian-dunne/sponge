@@ -1,19 +1,19 @@
 import React from 'react';
 import { s } from '../styles/stylesFile';
-import SettingsItem from './SettingsItem';
+import Item from './Item';
 import { FlatList } from 'react-native';
-const settingsArray = require('../data/SettingsArray.json');
 
-const SettingsList = (props) => {
+
+const ItemsList = (props) => {
   return (
-    <FlatList style={s.settingsView} 
-      data={settingsArray} 
+    <FlatList style={s.ListView} 
+      data={props.items} 
       keyExtractor={(item, index) => index.toString()} 
       renderItem={({item, index}) => (
-        <SettingsItem 
+        <Item 
           text={item.text}  
           answer={item.answer} 
-          last={index === settingsArray.length - 1} 
+          last={index === props.items.length - 1} 
           actionName={item.actionName}
           navigation={props.navigation}
         />
@@ -22,4 +22,4 @@ const SettingsList = (props) => {
   );
 };
 
-export default SettingsList;
+export default ItemsList;

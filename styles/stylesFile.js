@@ -14,7 +14,7 @@ export const s = StyleSheet.create({
   },
   settingsContainer: {
   },
-  listItem: {
+  Item: {
     padding: 10,
     marginHorizontal: 20,
     flexDirection: 'row'
@@ -35,5 +35,9 @@ export const s = StyleSheet.create({
   bottomBorder: {
     borderBottomWidth: 1, 
     borderBottomColor: colors.lightGrey
+  },
+  emptyIcon: {
+    width: 50,
+    height: 50
   }
 });

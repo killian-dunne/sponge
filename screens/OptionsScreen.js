@@ -3,8 +3,10 @@ import { View } from 'react-native';
 import GoBackIcon from '../components/GoBackIcon';
 import AccountIcon from '../components/AccountIcon';
 import SettingsSwitch from '../components/SettingsSwitch';
-import SettingsList from '../components/SettingsList';
+import ItemsList from '../components/ItemsList';
 import { s } from '../styles/stylesFile';
+
+const settingsArray = require('../data/OptionsArray.json');
 
 class OptionsScreen extends Component {
   render() {
@@ -12,10 +14,9 @@ class OptionsScreen extends Component {
       <View>
         <View style={s.header}>
           <GoBackIcon navigation={this.props.navigation} />
-          <SettingsSwitch />
           <AccountIcon />
         </View>
-        <SettingsList navigation={this.props.navigation} />
+        <ItemsList items={settingsArray} navigation={this.props.navigation} />
       </View>
     );
   }
