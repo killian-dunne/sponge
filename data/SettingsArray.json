@@ -1,0 +1,30 @@
+[
+  {
+    "text": "Name",
+    "answer": "Killian Dunne"
+  },
+  {
+    "text": "Email",
+    "answer": "killian.dunne97@gmail.com"
+  },
+  {
+    "text": "Tutorial/Tips",
+    "actionName": "linkTutorial"
+  },
+  {
+    "text": "Reading Settings",
+    "actionName": "navigateReadSettings"
+  },
+  {
+    "text": "General Settings",
+    "actionName": "navigateGenSettings"
+  },
+  {
+    "text": "Help/Support",
+    "actionName": "contact"
+  },
+  {
+    "text": "Log out",
+    "actionName": "logOut"
+  }
+]

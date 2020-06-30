@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { View } from 'react-native';
-import GoBackIcon from './GoBackIcon';
-import AccountIcon from './AccountIcon';
-import SettingsSwitch from './SettingsSwitch';
-import SettingsList from './SettingsList';
+import GoBackIcon from '../components/GoBackIcon';
+import AccountIcon from '../components/AccountIcon';
+import SettingsSwitch from '../components/SettingsSwitch';
+import SettingsList from '../components/SettingsList';
 import { s } from '../styles/stylesFile';
 
 class OptionsScreen extends Component {
@@ -15,7 +15,7 @@ class OptionsScreen extends Component {
           <SettingsSwitch />
           <AccountIcon />
         </View>
-        <SettingsList />
+        <SettingsList navigation={this.props.navigation} />
       </View>
     );
   }
