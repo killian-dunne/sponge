@@ -11,7 +11,6 @@ const files = require('../data/Files.json');
 class HomeScreen extends Component {
   
   render() {
-    console.log('this is files:', files);
     return (
       <View style={styles.mainContainer}>
         <View style={s.header}>

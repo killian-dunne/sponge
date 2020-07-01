@@ -8,7 +8,6 @@ import EmptyIcon from '../components/EmptyIcon';
 
 const SettingsScreen = ({ route, navigation }) => {
   const { switchOption } = route.params;
-  console.log(route.params);
   const [switchBool, toggleSwitch] = useState(switchOption === 'reading');
 
 

@@ -1,13 +1,17 @@
 import React from 'react';
 import Pdf from 'react-native-pdf';
-import { View, StyleSheet, Dimensions } from 'react-native';
+import { View, StyleSheet, Dimensions, Text } from 'react-native';
 
 const FileScreen = () => {
 
-  // const source = {uri:'http://samples.leanpub.com/thereactnativebook-sample.pdf',cache:true};
+  const source = {
+    uri:'http://samples.leanpub.com/thereactnativebook-sample.pdf',
+    cache:true
+  };
 
   return (
-    <View>
+    <View style={styles.pdfContainer}>
+      <Text>Just some text</Text>
       <Pdf 
         source={source}
         onLoadComplete={(numberOfPages,filePath)=>{
@@ -24,11 +28,15 @@ const FileScreen = () => {
         }}
         style={styles.pdf}
       />
+      <Text>I hope</Text>
     </View>
   );
 };
 
 const styles = StyleSheet.create({
+  pdfContainer: {
+    flex: 1
+  },
   pdf: {
     flex: 1, 
     width: Dimensions.get('window').width,
