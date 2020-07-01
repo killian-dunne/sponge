@@ -2,8 +2,6 @@ import React from 'react';
 import { Text, View, StyleSheet } from 'react-native';
 
 const File = (props) => {
-  console.log(props)
-  console.log(props.fileObject)
   let title = props.fileObject.title;
   let description = props.fileObject.description;
   let date = props.fileObject.date;
